@@ -42,15 +42,6 @@ namespace Unity.FPS.AI
         [Tooltip("Time delay between a weapon swap and the next attack")]
         public float DelayAfterWeaponSwap = 0f;
 
-        [Header("Eye color")] [Tooltip("Material for the eye color")]
-        public Material EyeColorMaterial;
-
-        [Tooltip("The default color of the bot's eye")] [ColorUsageAttribute(true, true)]
-        public Color DefaultEyeColor;
-
-        [Tooltip("The attack color of the bot's eye")] [ColorUsageAttribute(true, true)]
-        public Color AttackEyeColor;
-
         [Header("Flash on hit")] [Tooltip("The material used for the body of the hoverbot")]
         public Material BodyMaterial;
 
@@ -176,10 +167,6 @@ namespace Unity.FPS.AI
             {
                 for (int i = 0; i < renderer.sharedMaterials.Length; i++)
                 {
-                    if (renderer.sharedMaterials[i] == EyeColorMaterial)
-                    {
-                        m_EyeRendererData = new RendererIndexData(renderer, i);
-                    }
 
                     if (renderer.sharedMaterials[i] == BodyMaterial)
                     {
@@ -189,15 +176,6 @@ namespace Unity.FPS.AI
             }
 
             m_BodyFlashMaterialPropertyBlock = new MaterialPropertyBlock();
-
-            // Check if we have an eye renderer for this enemy
-            if (m_EyeRendererData.Renderer != null)
-            {
-                m_EyeColorMaterialPropertyBlock = new MaterialPropertyBlock();
-                m_EyeColorMaterialPropertyBlock.SetColor("_EmissionColor", DefaultEyeColor);
-                m_EyeRendererData.Renderer.SetPropertyBlock(m_EyeColorMaterialPropertyBlock,
-                    m_EyeRendererData.MaterialIndex);
-            }
         }
 
         void Update()
@@ -229,27 +207,11 @@ namespace Unity.FPS.AI
         void OnLostTarget()
         {
             onLostTarget.Invoke();
-
-            // Set the eye attack color and property block if the eye renderer is set
-            if (m_EyeRendererData.Renderer != null)
-            {
-                m_EyeColorMaterialPropertyBlock.SetColor("_EmissionColor", DefaultEyeColor);
-                m_EyeRendererData.Renderer.SetPropertyBlock(m_EyeColorMaterialPropertyBlock,
-                    m_EyeRendererData.MaterialIndex);
-            }
         }
 
         void OnDetectedTarget()
         {
             onDetectedTarget.Invoke();
-
-            // Set the eye default color and property block if the eye renderer is set
-            if (m_EyeRendererData.Renderer != null)
-            {
-                m_EyeColorMaterialPropertyBlock.SetColor("_EmissionColor", AttackEyeColor);
-                m_EyeRendererData.Renderer.SetPropertyBlock(m_EyeColorMaterialPropertyBlock,
-                    m_EyeRendererData.MaterialIndex);
-            }
         }
 
         public void OrientTowards(Vector3 lookPosition)
