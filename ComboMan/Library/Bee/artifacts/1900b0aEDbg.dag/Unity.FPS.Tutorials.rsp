@@ -341,7 +341,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Tutorials.Core.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
-"Assets/FPS/Tutorials/TutorialCallbacks.cs"
+"Assets/External/FPS/Tutorials/TutorialCallbacks.cs"
 -langversion:9.0
 
 /deterministic

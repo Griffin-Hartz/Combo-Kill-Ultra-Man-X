@@ -339,14 +339,14 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/fps.Game.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
-"Assets/FPS/Scripts/AI/DetectionModule.cs"
-"Assets/FPS/Scripts/AI/EnemyController.cs"
-"Assets/FPS/Scripts/AI/EnemyManager.cs"
-"Assets/FPS/Scripts/AI/EnemyMobile.cs"
-"Assets/FPS/Scripts/AI/EnemyTurret.cs"
-"Assets/FPS/Scripts/AI/FollowPlayer.cs"
-"Assets/FPS/Scripts/AI/NavigationModule.cs"
-"Assets/FPS/Scripts/AI/PatrolPath.cs"
+"Assets/External/FPS/Scripts/AI/DetectionModule.cs"
+"Assets/External/FPS/Scripts/AI/EnemyController.cs"
+"Assets/External/FPS/Scripts/AI/EnemyManager.cs"
+"Assets/External/FPS/Scripts/AI/EnemyMobile.cs"
+"Assets/External/FPS/Scripts/AI/EnemyTurret.cs"
+"Assets/External/FPS/Scripts/AI/FollowPlayer.cs"
+"Assets/External/FPS/Scripts/AI/NavigationModule.cs"
+"Assets/External/FPS/Scripts/AI/PatrolPath.cs"
 -langversion:9.0
 
 /deterministic

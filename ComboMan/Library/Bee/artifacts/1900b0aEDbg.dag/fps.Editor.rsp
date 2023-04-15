@@ -346,10 +346,10 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
-"Assets/FPS/Scripts/Editor/MiniProfiler.cs"
-"Assets/FPS/Scripts/Editor/PrefabReplacerEditor.cs"
-"Assets/FPS/Scripts/Editor/ShaderBuildStripping.cs"
-"Assets/FPS/Scripts/Editor/UITableEditor.cs"
+"Assets/External/FPS/Scripts/Editor/MiniProfiler.cs"
+"Assets/External/FPS/Scripts/Editor/PrefabReplacerEditor.cs"
+"Assets/External/FPS/Scripts/Editor/ShaderBuildStripping.cs"
+"Assets/External/FPS/Scripts/Editor/UITableEditor.cs"
 -langversion:9.0
 
 /deterministic
