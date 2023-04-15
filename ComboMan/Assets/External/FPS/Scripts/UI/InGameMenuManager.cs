@@ -90,11 +90,15 @@ namespace Unity.FPS.UI
 
             if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
             {
-                if (EventSystem.current.currentSelectedGameObject == null)
+                try
                 {
-                    EventSystem.current.SetSelectedGameObject(null);
-                    LookSensitivitySlider.Select();
+                    if (EventSystem.current.currentSelectedGameObject == null)
+                    {
+                        EventSystem.current.SetSelectedGameObject(null);
+                        LookSensitivitySlider.Select();
+                    }
                 }
+                catch { }
             }
         }
 

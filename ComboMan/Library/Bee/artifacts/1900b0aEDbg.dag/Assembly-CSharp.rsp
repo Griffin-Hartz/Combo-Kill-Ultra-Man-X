@@ -346,7 +346,6 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Microgame.Tutorials.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
--r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Play.Publisher.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AddOns.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AssetIdRemapUtility.ref.dll"
@@ -1039,6 +1038,8 @@
 "Assets/External/SMC Pack 1/Demo/DemoAssets/V_SMC_Handler.cs"
 "Assets/External/SMC Pack 1/Demo/DemoAssets/V_Text.cs"
 "Assets/Scripts/BillBoarding.cs"
+"Assets/Scripts/Enemy.cs"
+"Assets/Scripts/EnemyNav.cs"
 -langversion:9.0
 
 /deterministic
