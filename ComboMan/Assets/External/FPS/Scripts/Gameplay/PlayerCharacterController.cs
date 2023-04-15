@@ -145,7 +145,7 @@ namespace Unity.FPS.Gameplay
             ActorsManager actorsManager = FindObjectOfType<ActorsManager>();
             if (actorsManager != null)
                 actorsManager.SetPlayer(gameObject);
-            rb = GetComponent<Rigidbody>();
+            //rb = GameObject.Find("Collider").GetComponent<Rigidbody>();
         }
 
         void Start()
@@ -233,9 +233,9 @@ namespace Unity.FPS.Gameplay
 
 
             //FOR TESTING
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                StartDash();
+                //StartDash();
             }
 
 
@@ -245,7 +245,8 @@ namespace Unity.FPS.Gameplay
 
         public void StartDash()
         {
-            Vector3 force = new Vector3(DashMultiplier,1,1);
+            Quaternion quat = Camera.main.transform.rotation;
+            Vector3 force = new Vector3(quat.x, quat.y, quat.z);
             IsDashing = true;
             if (!IsPushDash)
             {
@@ -255,13 +256,15 @@ namespace Unity.FPS.Gameplay
             }
             else
             {
-                rb.AddForce(force);
+                Debug.Log("DashClick");
+                rb.AddForce(force * DashMultiplier, ForceMode.Impulse);
             }
             DashLeft = DashDuration;
         }
 
         public void EndDash()
         {
+            Debug.Log("EndDash");
             IsDashing = false;
             if (!IsPushDash)
             {
@@ -458,6 +461,7 @@ namespace Unity.FPS.Gameplay
 
         void HandleCharacterMovementDash()
         {
+            Debug.Log("IsDashing " + rb.velocity);
             // horizontal character rotation
             {
                 // rotate the transform with the input speed around its local Y axis
