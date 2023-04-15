@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638171224201571068
-    m_Hash: 1622369744
+      ticks: 638171236761637430
+    m_Hash: 2280584293
   m_LockFileStatus:
     m_FilePath: G:/Unity projects/ComboMan/ComboMan/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638171224201651904
-    m_Hash: 1599348994
+      ticks: 638171236761657368
+    m_Hash: 1697358269
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
