@@ -13,7 +13,7 @@ namespace Unity.FPS.AI
             Attack,
         }
 
-        public Animator Animator;
+        //public Animator Animator;
 
         [Tooltip("Fraction of the enemy's attack range at which it will stop moving towards target while attacking")]
         [Range(0f, 1f)]
@@ -67,7 +67,7 @@ namespace Unity.FPS.AI
             float moveSpeed = m_EnemyController.NavMeshAgent.velocity.magnitude;
 
             // Update animator speed parameter
-            Animator.SetFloat(k_AnimMoveSpeedParameter, moveSpeed);
+            //Animator.SetFloat(k_AnimMoveSpeedParameter, moveSpeed);
 
             // changing the pitch of the movement sound depending on the movement speed
             m_AudioSource.pitch = Mathf.Lerp(PitchDistortionMovementSpeed.Min, PitchDistortionMovementSpeed.Max,
@@ -133,7 +133,7 @@ namespace Unity.FPS.AI
 
         void OnAttack()
         {
-            Animator.SetTrigger(k_AnimAttackParameter);
+            //Animator.SetTrigger(k_AnimAttackParameter);
         }
 
         void OnDetectedTarget()
@@ -153,7 +153,7 @@ namespace Unity.FPS.AI
                 AudioUtility.CreateSFX(OnDetectSfx, transform.position, AudioUtility.AudioGroups.EnemyDetection, 1f);
             }
 
-            Animator.SetBool(k_AnimAlertedParameter, true);
+            //Animator.SetBool(k_AnimAlertedParameter, true);
         }
 
         void OnLostTarget()
@@ -168,7 +168,7 @@ namespace Unity.FPS.AI
                 OnDetectVfx[i].Stop();
             }
 
-            Animator.SetBool(k_AnimAlertedParameter, false);
+            //Animator.SetBool(k_AnimAlertedParameter, false);
         }
 
         void OnDamaged()
@@ -179,7 +179,7 @@ namespace Unity.FPS.AI
                 RandomHitSparks[n].Play();
             }
 
-            Animator.SetTrigger(k_AnimOnDamagedParameter);
+            //Animator.SetTrigger(k_AnimOnDamagedParameter);
         }
     }
 }
