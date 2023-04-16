@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private Vector3 lookDir;
     [SerializeField] private Vector3[] directions;
+    //public Transform left;
+    //public Transform right;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,24 +43,26 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Quaternion quat = transform.rotation;
+        Vector3 right = transform.right;
+        Vector3 left = -right;
         Vector3 vec = new Vector3(quat.x, quat.y, quat.z);
-        Vector3 left = new Vector3(0,-90,0);
+        //Quaternion.Lerp();
 
         if (Input.GetKey(KeyCode.W))
         {
-            GetComponent<Rigidbody>().velocity = transform.forward.normalized * moveForce;
+            GetComponent<Rigidbody>().velocity += transform.forward.normalized * moveForce;
         }
-        else if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            GetComponent<Rigidbody>().velocity = -transform.forward.normalized * moveForce;
+            GetComponent<Rigidbody>().velocity += -transform.forward.normalized * moveForce;
         }
-        else if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Rigidbody>().velocity = Vector3.left * moveForce;
+            GetComponent<Rigidbody>().velocity += left.normalized * moveForce;
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Rigidbody>().velocity = Vector3.right * moveForce;
+            GetComponent<Rigidbody>().velocity += right.normalized * moveForce;
         }
     }
 }

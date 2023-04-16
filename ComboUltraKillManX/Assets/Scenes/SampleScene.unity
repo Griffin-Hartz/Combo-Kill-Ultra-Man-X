@@ -630,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788577816748317317, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
       propertyPath: moveForce
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6804911816281442911, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
       propertyPath: m_Layer
