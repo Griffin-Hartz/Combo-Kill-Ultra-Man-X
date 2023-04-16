@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    //public GameObject body;
+
     public float mouseSensitivity = 100.0f;
     public float clampAngle = 80.0f;
 
@@ -28,5 +30,6 @@ public class MouseLook : MonoBehaviour
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
         transform.rotation = localRotation;
+        //body.transform.rotation = localRotation;
     }
 }
