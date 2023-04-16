@@ -41,10 +41,23 @@ public class PlayerMovement : MonoBehaviour
     {
         Quaternion quat = transform.rotation;
         Vector3 vec = new Vector3(quat.x, quat.y, quat.z);
+        Vector3 left = new Vector3(0,-90,0);
 
         if (Input.GetKey(KeyCode.W))
         {
-            GetComponent<Rigidbody>().velocity = transform.forward.normalized * 10;
+            GetComponent<Rigidbody>().velocity = transform.forward.normalized * moveForce;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            GetComponent<Rigidbody>().velocity = -transform.forward.normalized * moveForce;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.left * moveForce;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.right * moveForce;
         }
     }
 }
