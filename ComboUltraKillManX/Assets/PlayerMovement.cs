@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         /*lookDir = new Vector3(cam.transform.rotation.x, cam.transform.rotation.y, cam.transform.rotation.z).normalized;
         if (Input.GetKeyDown(KeyCode.W))
@@ -30,11 +30,21 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce( * moveForce);
         }*/
 
-
-        float xMove = Input.GetAxisRaw("Horizontal"); // d key changes value to 1, a key changes value to -1
+        /*float xMove = Input.GetAxisRaw("Horizontal"); // d key changes value to 1, a key changes value to -1
         float zMove = Input.GetAxisRaw("Vertical"); // w key changes value to 1, s key changes value to -1
 
         rb.velocity = new Vector3(xMove, rb.velocity.y, zMove) * moveForce; // Creates velocity in direction of value equal to keypress (WASD). rb.velocity.y deals with falling + jumping by setting velocity to y. 
 
+    }*/
+
+    private void FixedUpdate()
+    {
+        Quaternion quat = transform.rotation;
+        Vector3 vec = new Vector3(quat.x, quat.y, quat.z);
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            GetComponent<Rigidbody>().velocity = transform.forward.normalized * 10;
+        }
     }
 }
