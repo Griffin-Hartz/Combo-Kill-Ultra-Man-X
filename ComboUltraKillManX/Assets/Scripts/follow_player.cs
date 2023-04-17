@@ -5,6 +5,7 @@ using UnityEngine;
 public class follow_player : MonoBehaviour
 {
     private GameObject player;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()

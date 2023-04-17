@@ -12,6 +12,7 @@ public class Thrower : MonoBehaviour
     public Transform aimTrans;
     public int inventory = 100;
     public Vector3 throwAngle;
+    public AudioSource throwSource;
     // Start is called before the first frame update
 
     private void Start()
@@ -31,6 +32,7 @@ public class Thrower : MonoBehaviour
 
     public void ThrowGrenade()
     {
+        throwSource.Play();
         Vector3 aim = Vector3.Lerp(trans.position, aimTrans.position, 45);
         GameObject spawn = Instantiate(Grenade, trans.position + new Vector3(0,0,1), Quaternion.identity);
         //spawn.transform.LookAt(aim);
