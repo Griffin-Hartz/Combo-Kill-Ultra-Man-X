@@ -103,7 +103,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8968063949211575806}
   - component: {fileID: 6779679397129907927}
-  - component: {fileID: 929820184620742711}
   m_Layer: 3
   m_Name: Camera
   m_TagString: Untagged
@@ -169,27 +168,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &929820184620742711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6804911816281442911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf4f395e3d59764fbfa0866cffa2d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionPoint: {fileID: 0}
-  cam: {fileID: 0}
-  mouseSensitivity: 100
-  clampAngle: 80
-  following: 0
-  _speed: 7
-  _mouseSensitivity: 50
-  _minCameraview: -70
-  _maxCameraview: 80
 --- !u!1 &7468562860822389730
 GameObject:
   m_ObjectHideFlags: 0
