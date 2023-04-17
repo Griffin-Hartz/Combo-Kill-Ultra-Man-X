@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class checkpoint : MonoBehaviour
 {
+    public AudioSource deathNoise;
+    public Material hitMaterial;
 
     private Vector3 spawnPoint;
 
@@ -28,6 +30,7 @@ public class checkpoint : MonoBehaviour
     void playerDie()
     {
         gameObject.transform.position = spawnPoint;
+        deathNoise.Play();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -35,6 +38,7 @@ public class checkpoint : MonoBehaviour
         if(collision.gameObject.tag == "Checkpoint")
         {
             spawnPoint = collision.gameObject.transform.position + new Vector3(0,2,0);
+            collision.gameObject.GetComponent<Renderer>().material = hitMaterial;
         }
 
         if (collision.gameObject.tag == "Lava")

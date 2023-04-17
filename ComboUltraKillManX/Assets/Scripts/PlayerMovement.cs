@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveForce;
     [SerializeField] private float jumpForce;
     private Camera cam;
+    [SerializeField] private float coolDown = 0;
+    [SerializeField] private float maxCoolDown = 3;
     //[SerializeField] private Vector3 lookDir;
     //[SerializeField] private Vector3[] directions;
     //public Transform left;
@@ -26,9 +28,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && coolDown < 0)
         {
             exploder.Explode();
+            coolDown = maxCoolDown;
         }
         //if()
     }
@@ -63,5 +66,6 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponent<Rigidbody>().velocity += transform.up.normalized * jumpForce;
         }
+        coolDown -= Time.deltaTime;
     }
 }
