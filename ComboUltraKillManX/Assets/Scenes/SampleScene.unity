@@ -488,6 +488,26 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!54 &1782000047 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6211281837195232604, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
+  m_PrefabInstance: {fileID: 8695278334024149183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782000051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782000035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d2d8a0697981e4fbb72b5db7449cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1782000047}
+  explosionPower: 300
+  explosionRadius: 1
 --- !u!1001 &8000690474940987181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -652,5 +672,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6788577816748317317, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
