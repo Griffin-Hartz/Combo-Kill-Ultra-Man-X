@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Exploder exploder;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float moveForce;
+    [SerializeField] private float jumpForce;
     [SerializeField] private Camera cam;
     [SerializeField] private Vector3 lookDir;
     [SerializeField] private Vector3[] directions;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         {
             exploder.Explode();
         }
+        //if()
     }
 
     private void FixedUpdate()
@@ -52,6 +54,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             GetComponent<Rigidbody>().velocity += right.normalized * moveForce;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().velocity += transform.up.normalized * jumpForce;
         }
     }
 }
