@@ -240,6 +240,7 @@ MonoBehaviour:
   exploder: {fileID: 7380430527821649709}
   rb: {fileID: 6211281837195232604}
   moveForce: 1
+  jumpForce: 0
   cam: {fileID: 6779679397129907927}
   lookDir: {x: 0, y: 0, z: 0}
   directions: []
@@ -271,9 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf4f395e3d59764fbfa0866cffa2d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPoint: {fileID: 7674886571815838150}
-  cam: {fileID: 0}
-  mouseSensitivity: 200
+  explosionPoint: {fileID: 2756778043271695354}
+  cam: {fileID: 6779679397129907927}
+  mouseSensitivity: 700
   clampAngle: 50
 --- !u!1 &7699711915962949930
 GameObject:
