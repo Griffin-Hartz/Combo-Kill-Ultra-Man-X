@@ -48,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             GetComponent<Rigidbody>().velocity += -transform.forward.normalized * moveForce;
+            //offset flying backward effect
+            GetComponent<Rigidbody>().velocity += -transform.up.normalized * moveForce;
         }
         if (Input.GetKey(KeyCode.A))
         {
