@@ -13,6 +13,15 @@ public class MouseLook : MonoBehaviour
     private float rotY = 0.0f; // rotation around the up/y axis
     private float rotX = 0.0f; // rotation around the right/x axis
 
+    public bool following = false;
+
+    [SerializeField] private float _speed = 7f;
+    [SerializeField] private float _mouseSensitivity = 50f;
+    [SerializeField] private float _minCameraview = -70f, _maxCameraview = 80f;
+    private CharacterController _charController;
+    private Camera _camera;
+    private float xRotation = 0f;
+
     void Start()
     {
         Vector3 rot = transform.localRotation.eulerAngles;
