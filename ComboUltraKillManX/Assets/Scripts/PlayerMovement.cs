@@ -5,20 +5,22 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject body;
-    [SerializeField] private Exploder exploder;
-    [SerializeField] private Rigidbody rb;
+    //[SerializeField] private GameObject body;
+    private Exploder exploder;
+    //[SerializeField] private Rigidbody rb;
     [SerializeField] private float moveForce;
     [SerializeField] private float jumpForce;
-    [SerializeField] private Camera cam;
-    [SerializeField] private Vector3 lookDir;
-    [SerializeField] private Vector3[] directions;
+    private Camera cam;
+    //[SerializeField] private Vector3 lookDir;
+    //[SerializeField] private Vector3[] directions;
     //public Transform left;
     //public Transform right;
     // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        rb = body.GetComponent<Rigidbody>();
+        exploder = GetComponent<Exploder>();
+        cam = GetComponent<Camera>();
     }
 
     // Update is called once per frame
