@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -25,13 +26,18 @@ public class Thrower : MonoBehaviour
             ThrowGrenade();
             inventory--;
         }
+        Debug.DrawRay(transform.position, transform.forward, Color.red, 10f);
     }
 
     public void ThrowGrenade()
     {
         Vector3 aim = Vector3.Lerp(trans.position, aimTrans.position, 45);
         GameObject spawn = Instantiate(Grenade, trans.position + new Vector3(0,0,1), Quaternion.identity);
-        spawn.GetComponent<Rigidbody>().AddForce(aim * throwForce);
+        //spawn.transform.LookAt(aim);
+        //Quaternion rot = spawn.transform.rotation;
+        //Vector3 aimVec = new Vector3(rot.x, rot.y, rot.z);
+        spawn.GetComponent<Rigidbody>().AddForce(transform.forward * throwForce, ForceMode.Impulse);
+
         //huck it man
     }
 
