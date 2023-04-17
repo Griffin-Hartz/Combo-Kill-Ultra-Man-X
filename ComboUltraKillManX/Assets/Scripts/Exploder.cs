@@ -20,7 +20,7 @@ public class Exploder : MonoBehaviour
 
     public void Explode()
     {
-        Debug.Log("Exploding");
+        //Debug.Log("Exploding");
         Vector3 pos = ExplosionPoint.position;
         rb.AddExplosionForce(explosionPower, pos, explosionRadius, 3.0F, ForceMode.Impulse);
     }
