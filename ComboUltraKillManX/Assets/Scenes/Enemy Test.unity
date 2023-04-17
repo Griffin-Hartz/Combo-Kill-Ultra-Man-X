@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5d133deeaa66ed445853e946ff25e073, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.21108171, g: 0.05813721, b: 0.036018983, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2351,6 +2351,10 @@ PrefabInstance:
       propertyPath: mouseSensitivity
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 929820184620742711, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4323081413423415128, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
       propertyPath: jumpForce
       value: 1
@@ -2375,7 +2379,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 929820184620742711, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a778ed362b408c4382e26197e1adef9, type: 3}
 --- !u!1 &1060171564
 GameObject:
