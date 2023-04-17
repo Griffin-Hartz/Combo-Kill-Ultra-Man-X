@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Checkpoint
   - Lava
+  - Grenade
+  - Environment
   layers:
   - Default
   - TransparentFX

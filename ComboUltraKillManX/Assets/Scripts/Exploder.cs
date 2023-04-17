@@ -19,6 +19,19 @@ public class Exploder : MonoBehaviour
         catch { }
     }
 
+    private void Update()
+    {
+        if (rb != null)
+        {
+            //if(rb.)
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+    }
+
     public void Explode()
     {
         //Debug.Log("Exploding");
