@@ -4,6 +4,8 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     //public GameObject body;
+    public GameObject explosionPoint;
+    public Camera cam;
 
     public float mouseSensitivity = 100.0f;
     public float clampAngle = 80.0f;
@@ -16,6 +18,7 @@ public class MouseLook : MonoBehaviour
         Vector3 rot = transform.localRotation.eulerAngles;
         rotY = rot.y;
         rotX = rot.x;
+        cam = GetComponent<Camera>();
     }
 
     void Update()
@@ -31,5 +34,9 @@ public class MouseLook : MonoBehaviour
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
         transform.rotation = localRotation;
         //body.transform.rotation = localRotation;
+        //Vector3 forward = transform.forward;
+        //Debug.Log("Forward: " + forward);
+        //explosionPoint.transform.position = -forward;
+        //explosionPoint.transform.position = cam.transform.forward * -1;
     }
 }
