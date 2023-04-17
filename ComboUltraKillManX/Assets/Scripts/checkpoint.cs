@@ -36,5 +36,10 @@ public class checkpoint : MonoBehaviour
         {
             spawnPoint = collision.gameObject.transform.position + new Vector3(0,2,0);
         }
+
+        if (collision.gameObject.tag == "Lava")
+        {
+            playerDie();
+        }
     }
 }
