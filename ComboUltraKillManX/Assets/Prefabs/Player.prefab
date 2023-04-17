@@ -31,6 +31,37 @@ Transform:
   m_Father: {fileID: 388854693449221307}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2051142124724666898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 778615787841672472}
+  m_Layer: 3
+  m_Name: Aim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &778615787841672472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051142124724666898}
+  m_LocalRotation: {x: -0.3050102, y: -0, z: -0, w: 0.9523491}
+  m_LocalPosition: {x: 0, y: 0.37, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 388854693449221307}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -35.518, y: 0, z: 0}
 --- !u!1 &2756778043271695354
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +199,7 @@ GameObject:
   - component: {fileID: 4323081413423415128}
   - component: {fileID: 7380430527821649709}
   - component: {fileID: 8338661242120126598}
+  - component: {fileID: 1059493298388061232}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -192,6 +224,7 @@ Transform:
   - {fileID: 572225138546542075}
   - {fileID: 6038602706294218324}
   - {fileID: 7674886571815838150}
+  - {fileID: 778615787841672472}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -240,6 +273,7 @@ MonoBehaviour:
   exploder: {fileID: 7380430527821649709}
   rb: {fileID: 6211281837195232604}
   moveForce: 1
+  jumpForce: 0
   cam: {fileID: 6779679397129907927}
   lookDir: {x: 0, y: 0, z: 0}
   directions: []
@@ -275,6 +309,23 @@ MonoBehaviour:
   cam: {fileID: 0}
   mouseSensitivity: 200
   clampAngle: 50
+--- !u!114 &1059493298388061232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468562860822389730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25539acc929a6d24a870673bb8d4f9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Grenade: {fileID: 1400116749395624687, guid: 7a99b94451abecf42a074086efefb817, type: 3}
+  throwForce: 10
+  aimTrans: {fileID: 778615787841672472}
+  inventory: 100
+  throwAngle: {x: 0, y: 0, z: 0}
 --- !u!1 &7699711915962949930
 GameObject:
   m_ObjectHideFlags: 0
